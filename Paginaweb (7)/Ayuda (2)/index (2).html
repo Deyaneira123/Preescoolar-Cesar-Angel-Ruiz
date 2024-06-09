@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicios</title>
+</head>
+<style>
+	
+</style>
+<body>
+	<table border="3" cellpadding="5px" cellspacing="5px">
+		<tr>
+			<th><button onclick="ej1()">Ejercicio 1</button></th>
+			<th><button onclick="ej2()">Ejercicio 2</button></th>
+			<th><button onclick="ej3()">Ejercicio 3</button></th>
+		</tr>
+		<tr>
+			<td id="datos">Datos 1: </td>
+			<td id="datos2-1">Datos 1: </td>
+			<td id="datos3-1">Datos 1: </td>
+		</tr>
+		<tr>
+			<td id="datos2">Datos 2: </td>
+			<td id="datos2-2">Datos 2: </td>
+			<td id="datos3-2">Datos 2: </td>
+		</tr>
+		<tr>
+			<td id="datos3">Datos 3: </td>
+			<td id="datos2-3">Datos 3: </td>
+			<td id="datos3-3">Datos 3: </td>
+		</tr>
+		<tr>
+			<td id="datos4">Datos 4: </td>
+			<td id="datos2-4">Datos 4: </td>
+			<td id="datos3-4">Datos 4: </td>
+		</tr>
+	</table>
+
+	<script>
+		let nums = [];
+		let r = "";
+		let i = 0;
+		function ej1(){
+			while(r != "no"){
+				nums[i] = Number(prompt("Ingrese un número "));
+				i++;
+
+				r = prompt("Desea seguir capturando datos? si/no");
+			}
+			document.getElementById("datos").innerHTML = "La lista de los números es: " + nums;
+
+			document.getElementById("datos2").innerHTML = "La lista ordenada ascendentemente es: " + nums.sort();
+			document.getElementById("datos3").innerHTML = "La lista ordenada descendentemente es: " + nums.reverse()
+			document.getElementById("datos4").innerHTML = "La longitud de la lista es: " + nums.length;
+		}
+		
+		function ej2(){
+			let num=[];
+			let inicio = Number(prompt("Ingrese el rango inicial"));
+			let r= "";
+			for(let i = inicio; i<=15; ){
+				document.getElementById("datos2-1").innerHTML = "Los numeros son: " + i + "<br>";
+				i++;
+				
+			}
+		}
+
+
+		function ej3(){
+			let rangoi = Number(prompt("Rango inicial"));
+			let rango=rangoi;
+			let rangof = Number(prompt("Rango final"));
+			let rangofi=rangof-1;
+			let numero=[];
+			let arr=[];
+			let par = [];
+	    	let impar = [];
+	    	let i=0;
+	    	let y=0;
+	    	let l=0;
+	    	let k=0;
+	    for(let j=rango;j<=rangofi;j++){
+	    	arr[y]=rango+1;
+	    	rango=rango+1;
+	    	y++;
+	    }
+		for(let x=rangoi;x<=rangof;x++){
+			numero[i]=rangoi;
+			rangoi=rangoi+1;
+
+			if (numero[i] % 2 == 0){
+		        par[l] = numero[i];
+		        l++;
+	        }else{
+		        impar[k] = numero[i];
+		        k++;  
+		}
+	i++;
+		}
+		document.getElementById("datos3-1").innerHTML= "El arreglo es: " + arr;
+		document.getElementById("datos3-2").innerHTML= "Los numeros pares son: " + par;
+		document.getElementById("datos3-3").innerHTML= "Los numeros impares son: " + impar;
+		document.getElementById("datos3-4").innerHTML= "La longuitud del arreglo es: " + arr.length;
+		}
+	</script>
+</body>
+</html>

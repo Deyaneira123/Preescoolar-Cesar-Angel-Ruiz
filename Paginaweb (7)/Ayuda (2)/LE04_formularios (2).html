@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LE04_formularios</title>
+</head>
+<style>
+    #form2{
+        float: right;
+        width: 50%;
+    }
+    #formulario{
+        float: left;
+        width: 50%;
+    }
+</style>
+<body>
+    <form id="formulario">
+        <label>Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+
+        <label>Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"><br>
+        
+        <p>Semestre:</p>
+        <label>Primero</label>
+        <input type="radio" name="semestre" value="primero">
+        <label>Segundo</label>
+        <input type="radio" name="semestre" value="segundo">
+        <label>Tercero</label>
+        <input type="radio" name="semestre" value="tercero">
+        <label>Cuarto</label>
+        <input type="radio" name="semestre" value="cuarto">
+
+        <p>Gustos musicales:</p>
+        <label>Electronica</label>
+        <input type="checkbox" name="electronica" id="electronica" value="Electronica">
+        <label>Pop</label>
+        <input type="checkbox" name="pop" id="pop" value="Pop">
+        <label>Regional</label>
+        <input type="checkbox" name="regional" id="regional" value="Regional">
+        <label>Corridos</label>
+        <input type="checkbox" name="corridos" id="corridos" value="Corridos">
+        <br>
+        <br>
+
+        <label>Lista:</label>
+        <select id="lista">
+            <option>Musica</option>
+            <option>Arte</option>
+            <option>Deporte</option>
+            <option>Escritura</option>
+        </select>
+        <br>
+        <label>Textarea:</label><br>
+        <textarea id="textarea" name="textarea"></textarea><br>
+
+        <br>
+    </form>
+<br>
+
+    <form id="form2">
+        <label>Nombre:</label>
+        <input id="nombre2"><br>
+        <label>Apellidos:</label>
+        <input id="apellido2"><br>
+        <label>Semestre:</label>
+        <input id="sem"><br>
+        <label>Tipo de musica:</label>
+        <input id="msc"><br>
+        <label>Lista:</label>
+        <input id="lst"><br>
+        <label>Text Area:</label>
+        <input id="txta"><br>
+    </form>
+
+        <button onclick="datos()">Mostrar datos</button>
+
+    <script>
+        function datos(){
+            let valor = document.getElementById("nombre").value;
+            document.getElementById("nombre2").value = valor
+            let valor2 = document.getElementById("apellidos").value;
+            document.getElementById("apellido2").value = valor2;
+
+            let seleccion = 0;
+            let valores = document.getElementsByName("semestre");
+            for(let i = 0; i<valores.length; i++){
+                if(valores[i].checked){
+                    seleccion = valores[i].value;
+                    document.getElementById("sem").value = seleccion;
+                }
+            }
+            let valor3 = "";
+            if(document.getElementById("electronica").checked){
+                valor3 += document.getElementById("electronica").value + " ";
+            }
+            if(document.getElementById("pop").checked){
+                valor3 += document.getElementById("pop").value + " ";
+            }
+            if(document.getElementById("regional").checked){
+                valor3 += document.getElementById("regional").value + " ";
+            }
+            if(document.getElementById("corridos").checked){
+                valor3 += document.getElementById("corridos").value + " ";
+            }
+            document.getElementById("msc").value = valor3;
+
+            let lista = document.getElementById("lista");
+            let indice = lista.selectedIndex;
+            let opcion = lista.options[indice];
+            let seleccion2 = opcion.text;
+            let valor4 = opcion.value;
+            document.getElementById("lst").value = seleccion2;
+
+            let valor5 = document.getElementById("textarea").value;
+            document.getElementById("txta").value = valor5;
+        }
+    </script>
+</body>
+</html>

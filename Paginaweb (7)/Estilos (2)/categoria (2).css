@@ -1,0 +1,175 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#encabezado {
+	color: black;
+	font-family: cursive;
+	text-align: center;
+	font-size: 40px;
+	background: white;
+	height: 100px;
+	width: 100%;
+}
+
+.navegacion {
+	font-family: cursive;
+	font-size: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background-color: yellow;
+	width: 100%;
+}
+
+.navegacion li a {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+
+}
+
+.navegacion>li {
+	display: inline-block;
+	margin-left: 35px;
+	width: 15%;
+}
+
+.navegacion li a:hover {
+	background-color: #EB8A44;
+}
+
+.navegacion li ul {
+	display: none;
+	position: absolute;
+	background-color: yellow;
+	min-width: 15%;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	margin: 0;
+	padding: 0;
+
+}
+
+.navegacion li:hover>ul {
+	display: block;
+}
+
+h2 {
+	font-family: cursive;
+}
+
+th {
+	font-family: cursive;
+}
+
+li {
+	font-family: cursive;
+}
+
+#sec1 {
+	background: #EB8A44;
+	float: left;
+	width: 25%;
+	height: 360px;
+}
+
+#sec2 {
+	color: yellow;
+	text-align: center;
+	font-size: 20px;
+	font-family: cursive;
+	background: #EB8A44;
+	float: right;
+	width: 25%;
+	height: 360px;
+}
+
+#sec02 {
+	color: yellow;
+	text-align: center;
+	font-size: 20px;
+	font-family: cursive;
+	background: #EB8A44;
+	float: left;
+	width: 25%;
+	height: 360px;
+}
+
+#sec03 {
+	background: #EB8A44;
+	float: left;
+	width: 25%;
+	height: 360px;
+}
+
+#grado1 {
+	color: yellow;
+	font-family: cursive;
+	text-align: center;
+	font-size: 35px;
+	background: white;
+	float: left;
+	width: 98%;
+	height: 70px;
+	border: 12px double #EB8A44;
+	border-radius: 20px;
+}
+
+#grado2 {
+	color: yellow;
+	font-family: cursive;
+	text-align: center;
+	font-size: 35px;
+	background: white;
+	float: left;
+	width: 98%;
+	height: 70px;
+	border: 12px double #EB8A44;
+	border-radius: 20px;
+
+}
+
+#grado3 {
+	color: yellow;
+	font-family: cursive;
+	text-align: center;
+	font-size: 35px;
+	background: white;
+	float: left;
+	width: 98%;
+	height: 70px;
+	border: 12px double #EB8A44;
+	border-radius: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	background-color: #CB0000;
+	color: violet;
+}
+
+#pie1 {
+	color: #EB8A44;
+	text-align: center;
+	font-size: 50px;
+	font-family: cursive;
+	background: beige;
+	float: left;
+	clear: both;
+	width: 50%;
+	height: 350px;
+}
+
+#pie2 {
+
+	background: beige;
+	float: right;
+	width: 50%;
+	height: 350px;
+}
